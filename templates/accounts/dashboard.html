@@ -1,0 +1,34 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h2 class="page-title">Dashboard Overview</h2>
+
+<div class="stats-grid">
+    <div class="stat-card">
+        <h3>Total Patients</h3>
+        <p>{{ total_patients }}</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Male Patients</h3>
+        <p>{{ male_patients }}</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Female Patients</h3>
+        <p>{{ female_patients }}</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Recent Patients</h3>
+        <p>{{ recent_patients }}</p>
+    </div>
+</div>
+
+<div class="card">
+    <h3 style="margin-bottom:20px; font-size:24px;">Quick Actions</h3>
+    <a href="{% url 'add_patient' %}" class="btn btn-primary">+ Add New Patient</a>
+    <a href="{% url 'patients' %}" class="btn btn-success">📋 View All Patients</a>
+</div>
+{% endblock %}

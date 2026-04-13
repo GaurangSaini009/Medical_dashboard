@@ -1,0 +1,28 @@
+{% extends 'accounts/base.html' %}
+{% block content %}
+
+<h2 class="page-title">Appointments</h2>
+
+<a href="{% url 'add_appointment' %}" class="btn btn-primary">+ Book Appointment</a>
+
+<table>
+    <tr>
+        <th>Patient</th>
+        <th>Doctor</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Status</th>
+    </tr>
+
+    {% for a in appointments %}
+    <tr>
+        <td>{{ a.patient.name }}</td>
+        <td>{{ a.doctor.name }}</td>
+        <td>{{ a.date }}</td>
+        <td>{{ a.time }}</td>
+        <td>{{ a.status }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

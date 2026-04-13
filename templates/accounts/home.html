@@ -1,0 +1,22 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="card" style="padding:40px;">
+    <h1 style="font-size:42px; margin-bottom:15px;">Smart Healthcare Starts Here</h1>
+
+    <p style="font-size:18px; color:#475569; margin-bottom:25px;">
+        MedCare+ is a modern medical management platform designed to simplify patient handling, appointments, reports, and healthcare services.
+    </p>
+
+    <a href="{% url 'dashboard' %}" class="btn btn-primary">Get Started</a>
+    <a href="{% url 'services' %}" class="btn btn-success">Explore Services</a>
+</div>
+
+<div class="card">
+    <h2 style="margin-bottom:15px;">Why Choose MedCare+?</h2>
+    <p style="margin-bottom:10px;"><strong>Patient Management:</strong> Store and manage patient records securely and efficiently.</p>
+    <p style="margin-bottom:10px;"><strong>Easy Access:</strong> Doctors and staff can quickly access dashboards and patient details.</p>
+    <p><strong>Smart Reports:</strong> Generate reports for appointments and medical analysis.</p>
+</div>
+{% endblock %}

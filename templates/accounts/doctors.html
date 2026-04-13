@@ -1,0 +1,26 @@
+{% extends 'accounts/base.html' %}
+{% block content %}
+
+<h2 class="page-title">Doctors</h2>
+
+<a href="{% url 'add_doctor' %}" class="btn btn-primary">+ Add Doctor</a>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Specialization</th>
+        <th>Experience</th>
+        <th>Contact</th>
+    </tr>
+
+    {% for d in doctors %}
+    <tr>
+        <td>{{ d.name }}</td>
+        <td>{{ d.specialization }}</td>
+        <td>{{ d.experience }} yrs</td>
+        <td>{{ d.contact }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

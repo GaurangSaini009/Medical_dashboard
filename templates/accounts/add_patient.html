@@ -1,0 +1,14 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Add Patient{% endblock %}
+
+{% block content %}
+<h2 class="page-title">Add New Patient</h2>
+
+<div class="card" style="max-width:700px; margin:auto;">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary" style="width:100%;">Save Patient</button>
+    </form>
+</div>
+{% endblock %}

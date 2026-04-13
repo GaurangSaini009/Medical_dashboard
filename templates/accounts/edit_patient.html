@@ -1,0 +1,18 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Edit Patient{% endblock %}
+
+{% block content %}
+<h2 class="page-title">Edit Patient - {{ patient.name }}</h2>
+
+<div class="card" style="max-width:700px; margin:auto;">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-warning" style="width:100%;">Update Patient</button>
+    </form>
+
+    <div style="margin-top:20px; text-align:center;">
+        <a href="{% url 'patients' %}" class="btn btn-primary">← Back to Patient List</a>
+    </div>
+</div>
+{% endblock %}
